@@ -1,6 +1,9 @@
 package com.applaudostudios.scorekeeperappchallenge;
 
-public class Team {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Team implements Parcelable {
 
     private int mGoals;
     private int mGoalsFromPenalty;
@@ -10,7 +13,7 @@ public class Team {
     private int mRedCards;
     private int mRedCards2;
 
-    public Team(){
+    Team() {
         this.mGoals = 0;
         this.mGoalsFromPenalty = 0;
         this.mFouls = 0;
@@ -19,27 +22,27 @@ public class Team {
         this.mRedCards2 = 0;
     }
 
-    public void setmGoals(int mGoals) {
+    public void setGoals(int mGoals) {
         this.mGoals = mGoals;
     }
 
-    public void setmGoalsFromPenalty(int mGoalsFromPenalty) {
+    public void setGoalsFromPenalty(int mGoalsFromPenalty) {
         this.mGoalsFromPenalty = mGoalsFromPenalty;
     }
 
-    public void setmFouls(int mFouls) {
+    public void setFouls(int mFouls) {
         this.mFouls = mFouls;
     }
 
-    public void setmYellowCards(int mYellowCards) {
+    public void setYellowCards(int mYellowCards) {
         this.mYellowCards = mYellowCards;
     }
 
-    public void setmRedCards(int mRedCards) {
+    public void setRedCards(int mRedCards) {
         this.mRedCards = mRedCards;
     }
 
-    public void setmRedCards2(int mRedCards2) {
+    public void setRedCards2(int mRedCards2) {
         this.mRedCards2 = mRedCards2;
     }
 
@@ -95,4 +98,39 @@ public class Team {
         this.mRedCards2++;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.mGoals);
+        dest.writeInt(this.mGoalsFromPenalty);
+        dest.writeInt(this.mFouls);
+        dest.writeInt(this.mYellowCards);
+        dest.writeInt(this.mRedCards);
+        dest.writeInt(this.mRedCards2);
+    }
+
+    private Team(Parcel in) {
+        this.mGoals = in.readInt();
+        this.mGoalsFromPenalty = in.readInt();
+        this.mFouls = in.readInt();
+        this.mYellowCards = in.readInt();
+        this.mRedCards = in.readInt();
+        this.mRedCards2 = in.readInt();
+    }
+
+    public static final Parcelable.Creator<Team> CREATOR = new Parcelable.Creator<Team>() {
+        @Override
+        public Team createFromParcel(Parcel source) {
+            return new Team(source);
+        }
+
+        @Override
+        public Team[] newArray(int size) {
+            return new Team[size];
+        }
+    };
 }

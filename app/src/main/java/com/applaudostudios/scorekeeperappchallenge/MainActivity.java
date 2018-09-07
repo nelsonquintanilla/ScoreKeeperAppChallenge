@@ -55,13 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         redCardsBarcelonaTextView = findViewById(R.id.redCardsBarcelonaTextView);
         redCards2BarcelonaTextView = findViewById(R.id.redCards2BarcelonaTextView);
 
-        scoreBarcelonaTextView.setText(String.valueOf(barcelona.getGoals()));
-        goalsFromPenaltyBarcelonaTextView.setText(String.valueOf(barcelona.getGoalsFromPenalty()));
-        foulsBarcelonaTextView.setText(String.valueOf(barcelona.getFouls()));
-        yellowCardsBarcelonaTextView.setText(String.valueOf(barcelona.getYellowCards()));
-        redCardsBarcelonaTextView.setText(String.valueOf(barcelona.getRedCards()));
-        redCards2BarcelonaTextView.setText(String.valueOf(barcelona.getRedCards2()));
-
         goalBarcelonaButton = findViewById(R.id.goalBarcelonaButton);
         goalsFromPenaltyBarcelonaButton = findViewById(R.id.goalsFromPenaltyBarcelonaButton);
         foulsBarcelonaButton = findViewById(R.id.foulsBarcelonaButton);
@@ -85,13 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         redCardsRealMadridTextView = findViewById(R.id.redCardsRealMadridTextView);
         redCards2RealMadridTextView = findViewById(R.id.redCards2RealMadridTextView);
 
-        scoreRealMadridTextView.setText(String.valueOf(realMadrid.getGoals()));
-        goalsFromPenaltyRealMadridTextView.setText(String.valueOf(realMadrid.getGoalsFromPenalty()));
-        foulsRealMadridTextView.setText(String.valueOf(realMadrid.getFouls()));
-        yellowCardsRealMadridTextView.setText(String.valueOf(realMadrid.getYellowCards()));
-        redCardsRealMadridTextView.setText(String.valueOf(realMadrid.getRedCards()));
-        redCards2RealMadridTextView.setText(String.valueOf(realMadrid.getRedCards2()));
-
         goalRealMadridButton = findViewById(R.id.goalRealMadridButton);
         goalsFromPenaltyRealMadridButton = findViewById(R.id.goalsFromPenaltyRealMadridButton);
         foulsRealMadridButton = findViewById(R.id.foulsRealMadridButton);
@@ -109,6 +95,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resetAll = findViewById(R.id.resetAll);
         resetAll.setOnClickListener(this);
 
+        textViewsSetter();
+
+    }
+
+    public void textViewsSetter() {
+        scoreBarcelonaTextView.setText(String.valueOf(barcelona.getGoals()));
+        goalsFromPenaltyBarcelonaTextView.setText(String.valueOf(barcelona.getGoalsFromPenalty()));
+        foulsBarcelonaTextView.setText(String.valueOf(barcelona.getFouls()));
+        yellowCardsBarcelonaTextView.setText(String.valueOf(barcelona.getYellowCards()));
+        redCardsBarcelonaTextView.setText(String.valueOf(barcelona.getRedCards()));
+        redCards2BarcelonaTextView.setText(String.valueOf(barcelona.getRedCards2()));
+
+        scoreRealMadridTextView.setText(String.valueOf(realMadrid.getGoals()));
+        goalsFromPenaltyRealMadridTextView.setText(String.valueOf(realMadrid.getGoalsFromPenalty()));
+        foulsRealMadridTextView.setText(String.valueOf(realMadrid.getFouls()));
+        yellowCardsRealMadridTextView.setText(String.valueOf(realMadrid.getYellowCards()));
+        redCardsRealMadridTextView.setText(String.valueOf(realMadrid.getRedCards()));
+        redCards2RealMadridTextView.setText(String.valueOf(realMadrid.getRedCards2()));
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putParcelable("realMadrid", realMadrid);
+        outState.putParcelable("barcelona", barcelona);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        realMadrid = savedInstanceState.getParcelable("realMadrid");
+        barcelona = savedInstanceState.getParcelable("barcelona");
+        textViewsSetter();
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
@@ -142,7 +161,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 redCards2BarcelonaTextView.setText(String.valueOf(barcelona.getRedCards2()));
                 break;
 
-
             case R.id.goalRealMadridButton:
                 realMadrid.addGoal();
                 scoreRealMadridTextView.setText(String.valueOf(realMadrid.getGoals()));
@@ -170,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 realMadrid.addRedCard2();
                 redCards2RealMadridTextView.setText(String.valueOf(realMadrid.getRedCards2()));
                 break;
+
             case R.id.resetAll:
                 scoreBarcelonaTextView.setText(String.valueOf(0));
                 goalsFromPenaltyBarcelonaTextView.setText(String.valueOf(0));
@@ -178,12 +197,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 redCardsBarcelonaTextView.setText(String.valueOf(0));
                 redCards2BarcelonaTextView.setText(String.valueOf(0));
 
-                barcelona.setmGoals(0);
-                barcelona.setmGoalsFromPenalty(0);
-                barcelona.setmFouls(0);
-                barcelona.setmYellowCards(0);
-                barcelona.setmRedCards(0);
-                barcelona.setmRedCards2(0);
+                barcelona.setGoals(0);
+                barcelona.setGoalsFromPenalty(0);
+                barcelona.setFouls(0);
+                barcelona.setYellowCards(0);
+                barcelona.setRedCards(0);
+                barcelona.setRedCards2(0);
 
                 scoreRealMadridTextView.setText(String.valueOf(0));
                 goalsFromPenaltyRealMadridTextView.setText(String.valueOf(0));
@@ -192,12 +211,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 redCardsRealMadridTextView.setText(String.valueOf(0));
                 redCards2RealMadridTextView.setText(String.valueOf(0));
 
-                realMadrid.setmGoals(0);
-                realMadrid.setmGoalsFromPenalty(0);
-                realMadrid.setmFouls(0);
-                realMadrid.setmYellowCards(0);
-                realMadrid.setmRedCards(0);
-                realMadrid.setmRedCards2(0);
+                realMadrid.setGoals(0);
+                realMadrid.setGoalsFromPenalty(0);
+                realMadrid.setFouls(0);
+                realMadrid.setYellowCards(0);
+                realMadrid.setRedCards(0);
+                realMadrid.setRedCards2(0);
                 break;
         }
 
