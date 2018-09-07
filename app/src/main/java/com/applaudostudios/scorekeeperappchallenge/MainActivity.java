@@ -75,4 +75,10 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
+    public void resetAll(View v){
+        displayForBarcelona(0);
+        displayForRealMadrid(0);
+        barcelonaScore.setText(String.valueOf(0));
+        realMadridScore.setText(String.valueOf(0));
+    }
 }
