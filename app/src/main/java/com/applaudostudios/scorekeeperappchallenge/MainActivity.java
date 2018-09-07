@@ -3,24 +3,41 @@ package com.applaudostudios.scorekeeperappchallenge;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    int scoreRealMadrid = 0;
-    TextView realMadridScore;
-    TextView goalFromPenaltyRealMadrid;
-    TextView foulsRealMadrid;
-    TextView yellowCardsRealMadrid;
-    TextView redCardsRealMadrid;
-    TextView redCards2RealMadrid;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Team barcelona;
 
-    int scoreBarcelona = 0;
-    TextView barcelonaScore;
-    TextView goalFromPenaltyBarcelona;
-    TextView foulsBarcelona;
-    TextView yellowCardsBarcelona;
-    TextView redCardsBarcelona;
-    TextView redCards2Barcelona;
+    TextView scoreBarcelonaTextView;
+    TextView goalsFromPenaltyBarcelonaTextView;
+    TextView foulsBarcelonaTextView;
+    TextView yellowCardsBarcelonaTextView;
+    TextView redCardsBarcelonaTextView;
+    TextView redCards2BarcelonaTextView;
+
+    Button goalBarcelonaButton;
+    Button goalsFromPenaltyBarcelonaButton;
+    Button foulsBarcelonaButton;
+    Button yellowCardsBarcelonaButton;
+    Button redCardsBarcelonaButton;
+    Button redCards2BarcelonaButton;
+
+    Team realMadrid;
+
+    TextView scoreRealMadridTextView;
+    TextView goalsFromPenaltyRealMadridTextView;
+    TextView foulsRealMadridTextView;
+    TextView yellowCardsRealMadridTextView;
+    TextView redCardsRealMadridTextView;
+    TextView redCards2RealMadridTextView;
+
+    Button goalRealMadridButton;
+    Button goalsFromPenaltyRealMadridButton;
+    Button foulsRealMadridButton;
+    Button yellowCardsRealMadridButton;
+    Button redCardsRealMadridButton;
+    Button redCards2RealMadridButton;
 
 
     @Override
@@ -28,57 +45,106 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        realMadridScore = findViewById(R.id.real_madrid_score);
-        realMadridScore.setText(String.valueOf(0));
-        goalFromPenaltyRealMadrid = findViewById(R.id.goalFromPenaltyRealMadridTextView);
-        goalFromPenaltyRealMadrid.setText(String.valueOf(0));
-        foulsRealMadrid = findViewById(R.id.foulsRealMadridTextView);
-        foulsRealMadrid.setText(String.valueOf(0));
-        yellowCardsRealMadrid = findViewById(R.id.yellowCardsRealMadridTextView);
-        yellowCardsRealMadrid.setText(String.valueOf(0));
-        redCardsRealMadrid = findViewById(R.id.redCardsRealMadridTextView);
-        redCardsRealMadrid.setText(String.valueOf(0));
-        redCards2RealMadrid = findViewById(R.id.redCards2RealMadridTextView);
-        redCards2RealMadrid.setText(String.valueOf(0));
+        barcelona = new Team();
 
-        barcelonaScore = findViewById(R.id.barcelona_score);
-        barcelonaScore.setText(String.valueOf(0));
-        goalFromPenaltyBarcelona = findViewById(R.id.goalFromPenaltyBarcelonaTextView);
-        goalFromPenaltyBarcelona.setText(String.valueOf(0));
-        foulsBarcelona = findViewById(R.id.foulsBarcelonaTextView);
-        foulsBarcelona.setText(String.valueOf(0));
-        yellowCardsBarcelona = findViewById(R.id.yellowCardsBarcelonaTextView);
-        yellowCardsBarcelona.setText(String.valueOf(0));
-        redCardsBarcelona = findViewById(R.id.redCardsBarcelonaTextView);
-        redCardsBarcelona.setText(String.valueOf(0));
-        redCards2Barcelona = findViewById(R.id.redCards2BarcelonaTextView);
-        redCards2Barcelona.setText(String.valueOf(0));
+        scoreBarcelonaTextView = findViewById(R.id.barcelona_score);
+        goalsFromPenaltyBarcelonaTextView = findViewById(R.id.goalFromPenaltyBarcelonaTextView);
+        foulsBarcelonaTextView = findViewById(R.id.foulsBarcelonaTextView);
+        yellowCardsBarcelonaTextView = findViewById(R.id.yellowCardsBarcelonaTextView);
+        redCardsBarcelonaTextView = findViewById(R.id.redCardsBarcelonaTextView);
+        redCards2BarcelonaTextView = findViewById(R.id.redCards2BarcelonaTextView);
+
+        goalBarcelonaButton = findViewById(R.id.goalBarcelonaButton);
+        goalsFromPenaltyBarcelonaButton = findViewById(R.id.goalsFromPenaltyBarcelonaButton);
+        foulsBarcelonaButton = findViewById(R.id.foulsBarcelonaButton);
+        yellowCardsBarcelonaButton = findViewById(R.id.yellowCardsBarcelonaButton);
+        redCardsBarcelonaButton = findViewById(R.id.redCardsBarcelonaButton);
+        redCards2BarcelonaButton = findViewById(R.id.redCards2BarcelonaButton);
+
+        goalBarcelonaButton.setOnClickListener(this);
+        goalsFromPenaltyBarcelonaButton.setOnClickListener(this);
+        foulsBarcelonaButton.setOnClickListener(this);
+        yellowCardsBarcelonaButton.setOnClickListener(this);
+        redCardsBarcelonaButton.setOnClickListener(this);
+        redCards2BarcelonaButton.setOnClickListener(this);
+
+        realMadrid = new Team();
+
+        scoreRealMadridTextView = findViewById(R.id.real_madrid_score);
+        goalsFromPenaltyRealMadridTextView = findViewById(R.id.goalFromPenaltyRealMadridTextView);
+        foulsRealMadridTextView = findViewById(R.id.foulsRealMadridTextView);
+        yellowCardsRealMadridTextView = findViewById(R.id.yellowCardsRealMadridTextView);
+        redCardsRealMadridTextView = findViewById(R.id.redCardsRealMadridTextView);
+        redCards2RealMadridTextView = findViewById(R.id.redCards2RealMadridTextView);
+
+        goalRealMadridButton = findViewById(R.id.goalRealMadridButton);
+        goalsFromPenaltyRealMadridButton = findViewById(R.id.goalsFromPenaltyRealMadridButton);
+        foulsRealMadridButton = findViewById(R.id.foulsRealMadridButton);
+        yellowCardsRealMadridButton = findViewById(R.id.yellowCardsRealMadridButton);
+        redCardsRealMadridButton = findViewById(R.id.redCardsRealMadridButton);
+        redCards2RealMadridButton = findViewById(R.id.redCards2RealMadridButton);
+
+        goalRealMadridButton.setOnClickListener(this);
+        goalsFromPenaltyRealMadridButton.setOnClickListener(this);
+        foulsRealMadridButton.setOnClickListener(this);
+        yellowCardsRealMadridButton.setOnClickListener(this);
+        redCardsRealMadridButton.setOnClickListener(this);
+        redCards2RealMadridButton.setOnClickListener(this);
+
     }
 
-    public void addGoalForBarcelona(View v) {
-        scoreBarcelona += 1;
-        displayForBarcelona(scoreBarcelona);
-    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.goalBarcelonaButton:
+                barcelona.addGoal();
+                scoreBarcelonaTextView.setText(String.valueOf(barcelona.getGoals()));
+                break;
+            case R.id.goalsFromPenaltyBarcelonaButton:
+                barcelona.addGoalFromPenalty();
+                goalsFromPenaltyBarcelonaTextView.setText(String.valueOf(barcelona.getGoalsFromPenalty()));
+                break;
+            case R.id.foulsBarcelonaButton:
+                barcelona.addFoul();
+                foulsBarcelonaTextView.setText(String.valueOf(barcelona.getFouls()));
+                break;
+            case R.id.yellowCardsBarcelonaButton:
+                barcelona.addYellowCard();
+                yellowCardsBarcelonaTextView.setText(String.valueOf(barcelona.getYellowCards()));
+                break;
+            case R.id.redCardsBarcelonaButton:
+                barcelona.addRedCard();
+                redCardsBarcelonaTextView.setText(String.valueOf(barcelona.getRedCards()));
 
-    public void displayForBarcelona(int score) {
-        TextView scoreView = findViewById(R.id.barcelona_score);
-        scoreView.setText(String.valueOf(score));
-    }
+                break;
+            case R.id.redCards2BarcelonaButton:
+                barcelona.addRedCard2();
+                redCards2BarcelonaTextView.setText(String.valueOf(barcelona.getRedCards2()));
+                break;
 
-    public void addGoalForRealMadrid(View v) {
-        scoreRealMadrid += 1;
-        displayForRealMadrid(scoreRealMadrid);
-    }
 
-    public void displayForRealMadrid(int score) {
-        TextView scoreView = findViewById(R.id.real_madrid_score);
-        scoreView.setText(String.valueOf(score));
-    }
+            case R.id.goalRealMadridButton:
+                realMadrid.addGoal();
+                scoreRealMadridTextView.setText(String.valueOf(realMadrid.getGoals()));
+                break;
+            case R.id.goalsFromPenaltyRealMadridButton:
+                realMadrid.addGoalFromPenalty();
+                goalsFromPenaltyRealMadridTextView.setText(String.valueOf(realMadrid.getGoalsFromPenalty()));
+                break;
+            case R.id.foulsRealMadridButton:
+                realMadrid.addFoul();
+                foulsRealMadridTextView.setText(String.valueOf(realMadrid.getFouls()));
+                break;
+            case R.id.yellowCardsRealMadridButton:
+                realMadrid.addYellowCard();
+                yellowCardsRealMadridTextView.setText(String.valueOf(realMadrid.getYellowCards()));
+                break;
+            case R.id.redCards2RealMadridButton:
+                realMadrid.addRedCard2();
+                redCards2RealMadridTextView.setText(String.valueOf(realMadrid.getRedCards2()));
+                break;
+        }
 
-    public void resetAll(View v){
-        displayForBarcelona(0);
-        displayForRealMadrid(0);
-        barcelonaScore.setText(String.valueOf(0));
-        realMadridScore.setText(String.valueOf(0));
     }
 }
+

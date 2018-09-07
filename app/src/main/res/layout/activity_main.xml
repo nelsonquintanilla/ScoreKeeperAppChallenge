@@ -144,7 +144,6 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="8dp"
-                android:onClick="addGoalForBarcelona"
                 android:text="@string/goal_barcelona" />
 
             <android.support.constraint.ConstraintLayout
@@ -153,7 +152,7 @@
 
 
                 <Button
-                    android:id="@+id/goalFromPenaltyBarcelonaButton"
+                    android:id="@+id/goalsFromPenaltyBarcelonaButton"
                     android:layout_width="110dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="8dp"
@@ -174,11 +173,11 @@
                     android:layout_marginRight="8dp"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/goalFromPenaltyBarcelonaButton"
+                    app:layout_constraintBottom_toBottomOf="@+id/goalsFromPenaltyBarcelonaButton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/goalFromPenaltyBarcelonaButton"
-                    app:layout_constraintTop_toTopOf="@+id/goalFromPenaltyBarcelonaButton" />
+                    app:layout_constraintStart_toEndOf="@+id/goalsFromPenaltyBarcelonaButton"
+                    app:layout_constraintTop_toTopOf="@+id/goalsFromPenaltyBarcelonaButton" />
 
                 <TextView
                     android:id="@+id/foulsBarcelonaTextView"
@@ -206,7 +205,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/foulsBarcelonaTextView"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/goalFromPenaltyBarcelonaButton" />
+                    app:layout_constraintTop_toBottomOf="@+id/goalsFromPenaltyBarcelonaButton" />
 
                 <TextView
                     android:id="@+id/yellowCardsBarcelonaTextView"
@@ -319,7 +318,6 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="8dp"
-                android:onClick="addGoalForRealMadrid"
                 android:text="@string/goal_real_madrid" />
 
             <android.support.constraint.ConstraintLayout
@@ -327,7 +325,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/goalFromPenaltyRealMadridButton"
+                    android:id="@+id/goalsFromPenaltyRealMadridButton"
                     android:layout_width="110dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="8dp"
@@ -348,12 +346,12 @@
                     android:layout_marginStart="8dp"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/goalFromPenaltyRealMadridButton"
-                    app:layout_constraintEnd_toStartOf="@+id/goalFromPenaltyRealMadridButton"
+                    app:layout_constraintBottom_toBottomOf="@+id/goalsFromPenaltyRealMadridButton"
+                    app:layout_constraintEnd_toStartOf="@+id/goalsFromPenaltyRealMadridButton"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/goalFromPenaltyRealMadridButton" />
+                    app:layout_constraintTop_toTopOf="@+id/goalsFromPenaltyRealMadridButton" />
 
                 <Button
                     android:id="@+id/foulsRealMadridButton"
@@ -367,7 +365,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/foulsRealMadridTextView"
-                    app:layout_constraintTop_toBottomOf="@+id/goalFromPenaltyRealMadridButton" />
+                    app:layout_constraintTop_toBottomOf="@+id/goalsFromPenaltyRealMadridButton" />
 
                 <TextView
                     android:id="@+id/foulsRealMadridTextView"
@@ -491,8 +489,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:onClick="resetAll"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
