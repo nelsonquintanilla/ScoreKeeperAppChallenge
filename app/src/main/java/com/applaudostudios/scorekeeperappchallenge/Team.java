@@ -19,6 +19,30 @@ public class Team {
         this.mRedCards2 = 0;
     }
 
+    public void setmGoals(int mGoals) {
+        this.mGoals = mGoals;
+    }
+
+    public void setmGoalsFromPenalty(int mGoalsFromPenalty) {
+        this.mGoalsFromPenalty = mGoalsFromPenalty;
+    }
+
+    public void setmFouls(int mFouls) {
+        this.mFouls = mFouls;
+    }
+
+    public void setmYellowCards(int mYellowCards) {
+        this.mYellowCards = mYellowCards;
+    }
+
+    public void setmRedCards(int mRedCards) {
+        this.mRedCards = mRedCards;
+    }
+
+    public void setmRedCards2(int mRedCards2) {
+        this.mRedCards2 = mRedCards2;
+    }
+
     public int getGoals() {
         return mGoals;
     }
@@ -42,6 +66,7 @@ public class Team {
     public int getRedCards2() {
         return mRedCards2;
     }
+
 
     public void addGoal() {
         this.mGoals++;
