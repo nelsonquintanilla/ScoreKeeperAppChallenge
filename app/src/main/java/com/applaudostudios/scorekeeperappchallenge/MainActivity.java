@@ -7,15 +7,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    //Declaring team A object
     Team barcelona;
-
+    //Declaring all textViews from Team A
     TextView scoreBarcelonaTextView;
     TextView goalsFromPenaltyBarcelonaTextView;
     TextView foulsBarcelonaTextView;
     TextView yellowCardsBarcelonaTextView;
     TextView redCardsBarcelonaTextView;
     TextView redCards2BarcelonaTextView;
-
+    //Declaring all buttons from Team A
     Button goalBarcelonaButton;
     Button goalsFromPenaltyBarcelonaButton;
     Button foulsBarcelonaButton;
@@ -23,15 +24,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button redCardsBarcelonaButton;
     Button redCards2BarcelonaButton;
 
+    //Declaring team B object
     Team realMadrid;
-
+    //Declaring all textViews from Team B
     TextView scoreRealMadridTextView;
     TextView goalsFromPenaltyRealMadridTextView;
     TextView foulsRealMadridTextView;
     TextView yellowCardsRealMadridTextView;
     TextView redCardsRealMadridTextView;
     TextView redCards2RealMadridTextView;
-
+    //Declaring all buttons from Team B
     Button goalRealMadridButton;
     Button goalsFromPenaltyRealMadridButton;
     Button foulsRealMadridButton;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button redCardsRealMadridButton;
     Button redCards2RealMadridButton;
 
+    //Declaring reset button
     Button resetAll;
 
     @Override
@@ -99,6 +102,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    /**
+     * Sets all textViews to zero when the app starts and when is restored
+     */
     public void textViewsSetter() {
         scoreBarcelonaTextView.setText(String.valueOf(barcelona.getGoals()));
         goalsFromPenaltyBarcelonaTextView.setText(String.valueOf(barcelona.getGoalsFromPenalty()));
@@ -130,6 +136,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onRestoreInstanceState(savedInstanceState);
     }
 
+    /**
+     * It has a specific action (modify specific textViews) for each button when they're pressed
+     *
+     * @param v all the buttons in the layout
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -219,7 +230,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 realMadrid.setRedCards2(0);
                 break;
         }
-
     }
 }
 

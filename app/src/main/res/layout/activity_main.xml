@@ -3,505 +3,505 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#616161"
-    android:orientation="vertical">
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/score_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
-        tools:context=".MainActivity">
-
-        <ImageView
-            android:id="@+id/barcelona_logo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:layout_marginLeft="27dp"
-            android:layout_marginStart="27dp"
-            android:contentDescription="@string/barcelona_logo"
-            android:src="@drawable/barcelona_logo"
-            app:layout_constraintBottom_toBottomOf="@+id/barcelona_score"
-            app:layout_constraintEnd_toStartOf="@+id/barcelona_score"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/barcelona_score"
-            app:layout_constraintVertical_bias="0.19" />
-
-        <ImageView
-            android:id="@+id/real_madrid_logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/real_madrid_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/real_madrid_score"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/real_madrid_logo" />
-
-        <TextView
-            android:id="@+id/barcelona_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:textColor="#FFFFFF"
-            android:textSize="56sp"
-            app:layout_constraintBottom_toBottomOf="@+id/dash"
-            app:layout_constraintEnd_toStartOf="@+id/dash"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/barcelona_logo"
-            app:layout_constraintTop_toTopOf="@+id/dash" />
-
-        <TextView
-            android:id="@+id/real_madrid_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:textColor="#FFFFFF"
-            android:textSize="56sp"
-            app:layout_constraintBottom_toBottomOf="@+id/real_madrid_logo"
-            app:layout_constraintEnd_toStartOf="@+id/real_madrid_logo"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/dash"
-            app:layout_constraintTop_toTopOf="@+id/real_madrid_logo" />
-
-        <TextView
-            android:id="@+id/dash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dash"
-            android:textColor="#FFFFFF"
-            android:textSize="56sp"
-            app:layout_constraintBottom_toBottomOf="@+id/real_madrid_score"
-            app:layout_constraintEnd_toStartOf="@+id/real_madrid_score"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/barcelona_score"
-            app:layout_constraintTop_toTopOf="@+id/real_madrid_score" />
-
-        <TextView
-            android:id="@+id/barcelona_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/barcelona"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/barcelona_logo"
-            app:layout_constraintStart_toStartOf="@+id/barcelona_logo"
-            app:layout_constraintTop_toBottomOf="@+id/barcelona_logo"
-            tools:targetApi="jelly_bean" />
-
-        <TextView
-            android:id="@+id/real_madrid_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/real_madrid"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/barcelona_name"
-            app:layout_constraintEnd_toEndOf="@+id/real_madrid_logo"
-            app:layout_constraintStart_toStartOf="@+id/real_madrid_logo"
-            app:layout_constraintTop_toTopOf="@+id/barcelona_name"
-            tools:targetApi="jelly_bean" />
-
-    </android.support.constraint.ConstraintLayout>
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="#616161"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/score_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/barcelona_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginStart="27dp"
+                android:contentDescription="@string/barcelona_logo"
+                android:src="@drawable/barcelona_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/barcelona_score"
+                app:layout_constraintEnd_toStartOf="@+id/barcelona_score"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/barcelona_score"
+                app:layout_constraintVertical_bias="0.19" />
+
+            <ImageView
+                android:id="@+id/real_madrid_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/real_madrid_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/real_madrid_score"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/real_madrid_logo" />
+
+            <TextView
+                android:id="@+id/barcelona_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#FFFFFF"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dash"
+                app:layout_constraintEnd_toStartOf="@+id/dash"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/barcelona_logo"
+                app:layout_constraintTop_toTopOf="@+id/dash" />
+
+            <TextView
+                android:id="@+id/real_madrid_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:textColor="#FFFFFF"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toBottomOf="@+id/real_madrid_logo"
+                app:layout_constraintEnd_toStartOf="@+id/real_madrid_logo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dash"
+                app:layout_constraintTop_toTopOf="@+id/real_madrid_logo" />
+
+            <TextView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textColor="#FFFFFF"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toBottomOf="@+id/real_madrid_score"
+                app:layout_constraintEnd_toStartOf="@+id/real_madrid_score"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/barcelona_score"
+                app:layout_constraintTop_toTopOf="@+id/real_madrid_score" />
+
+            <TextView
+                android:id="@+id/barcelona_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/barcelona"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/barcelona_logo"
+                app:layout_constraintStart_toStartOf="@+id/barcelona_logo"
+                app:layout_constraintTop_toBottomOf="@+id/barcelona_logo"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/real_madrid_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/real_madrid"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/barcelona_name"
+                app:layout_constraintEnd_toEndOf="@+id/real_madrid_logo"
+                app:layout_constraintStart_toStartOf="@+id/real_madrid_logo"
+                app:layout_constraintTop_toTopOf="@+id/barcelona_name"
+                tools:targetApi="jelly_bean" />
+
+        </android.support.constraint.ConstraintLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/goalBarcelonaButton"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/goal_barcelona" />
-
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/goalsFromPenaltyBarcelonaButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/goal_from_penalty_barcelona"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toStartOf="@+id/goalFromPenaltyBarcelonaTextView"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/goalFromPenaltyBarcelonaTextView"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/goalBarcelonaButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/goalsFromPenaltyBarcelonaButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/goalsFromPenaltyBarcelonaButton"
-                    app:layout_constraintTop_toTopOf="@+id/goalsFromPenaltyBarcelonaButton" />
-
-                <TextView
-                    android:id="@+id/foulsBarcelonaTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/foulsBarcelonaButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/foulsBarcelonaButton"
-                    app:layout_constraintTop_toTopOf="@+id/foulsBarcelonaButton" />
-
-                <Button
-                    android:id="@+id/foulsBarcelonaButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/fouls_barcelona"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toStartOf="@+id/foulsBarcelonaTextView"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/goalsFromPenaltyBarcelonaButton" />
-
-                <TextView
-                    android:id="@+id/yellowCardsBarcelonaTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/yellowCardsBarcelonaButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/yellowCardsBarcelonaButton"
-                    app:layout_constraintTop_toTopOf="@+id/yellowCardsBarcelonaButton" />
-
-                <Button
-                    android:id="@+id/yellowCardsBarcelonaButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/yellow_cards_barcelona"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toStartOf="@+id/yellowCardsBarcelonaTextView"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/foulsBarcelonaButton" />
-
-                <Button
-                    android:id="@+id/redCardsBarcelonaButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/red_cards_barcelona"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toStartOf="@+id/redCardsBarcelonaTextView"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/yellowCardsBarcelonaButton" />
-
-                <TextView
-                    android:id="@+id/redCardsBarcelonaTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/redCardsBarcelonaButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/redCardsBarcelonaButton"
-                    app:layout_constraintTop_toTopOf="@+id/redCardsBarcelonaButton" />
-
-                <Button
-                    android:id="@+id/redCards2BarcelonaButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/red_cards_by_yellow_cards_accumulation_barcelona"
-                    android:textSize="8sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/redCards2BarcelonaTextView"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/redCardsBarcelonaButton"
-                    tools:ignore="SmallSp" />
+                    android:text="@string/goal_barcelona" />
 
-                <TextView
-                    android:id="@+id/redCards2BarcelonaTextView"
-                    android:layout_width="wrap_content"
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <Button
+                        android:id="@+id/goalsFromPenaltyBarcelonaButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/goal_from_penalty_barcelona"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/goalFromPenaltyBarcelonaTextView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/goalFromPenaltyBarcelonaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/goalsFromPenaltyBarcelonaButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/goalsFromPenaltyBarcelonaButton"
+                        app:layout_constraintTop_toTopOf="@+id/goalsFromPenaltyBarcelonaButton" />
+
+                    <TextView
+                        android:id="@+id/foulsBarcelonaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/foulsBarcelonaButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/foulsBarcelonaButton"
+                        app:layout_constraintTop_toTopOf="@+id/foulsBarcelonaButton" />
+
+                    <Button
+                        android:id="@+id/foulsBarcelonaButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/fouls_barcelona"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/foulsBarcelonaTextView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/goalsFromPenaltyBarcelonaButton" />
+
+                    <TextView
+                        android:id="@+id/yellowCardsBarcelonaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/yellowCardsBarcelonaButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/yellowCardsBarcelonaButton"
+                        app:layout_constraintTop_toTopOf="@+id/yellowCardsBarcelonaButton" />
+
+                    <Button
+                        android:id="@+id/yellowCardsBarcelonaButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/yellow_cards_barcelona"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/yellowCardsBarcelonaTextView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/foulsBarcelonaButton" />
+
+                    <Button
+                        android:id="@+id/redCardsBarcelonaButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/red_cards_barcelona"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/redCardsBarcelonaTextView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/yellowCardsBarcelonaButton" />
+
+                    <TextView
+                        android:id="@+id/redCardsBarcelonaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/redCardsBarcelonaButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/redCardsBarcelonaButton"
+                        app:layout_constraintTop_toTopOf="@+id/redCardsBarcelonaButton" />
+
+                    <Button
+                        android:id="@+id/redCards2BarcelonaButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/red_cards_by_yellow_cards_accumulation_barcelona"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/redCards2BarcelonaTextView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/redCardsBarcelonaButton"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/redCards2BarcelonaTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/redCards2BarcelonaButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/redCards2BarcelonaButton"
+                        app:layout_constraintTop_toTopOf="@+id/redCards2BarcelonaButton" />
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/goalRealMadridButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/redCards2BarcelonaButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/redCards2BarcelonaButton"
-                    app:layout_constraintTop_toTopOf="@+id/redCards2BarcelonaButton" />
-            </android.support.constraint.ConstraintLayout>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/goal_real_madrid" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/goalsFromPenaltyRealMadridButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/goal_from_penalty_real_madrid"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/goalFromPenaltyRealMadridTextView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/goalFromPenaltyRealMadridTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/goalsFromPenaltyRealMadridButton"
+                        app:layout_constraintEnd_toStartOf="@+id/goalsFromPenaltyRealMadridButton"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/goalsFromPenaltyRealMadridButton" />
+
+                    <Button
+                        android:id="@+id/foulsRealMadridButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/fouls_real_madrid"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/foulsRealMadridTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/goalsFromPenaltyRealMadridButton" />
+
+                    <TextView
+                        android:id="@+id/foulsRealMadridTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/foulsRealMadridButton"
+                        app:layout_constraintEnd_toStartOf="@+id/foulsRealMadridButton"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/foulsRealMadridButton" />
+
+                    <TextView
+                        android:id="@+id/yellowCardsRealMadridTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/yellowCardsRealMadridButton"
+                        app:layout_constraintEnd_toStartOf="@+id/yellowCardsRealMadridButton"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/yellowCardsRealMadridButton" />
+
+                    <Button
+                        android:id="@+id/yellowCardsRealMadridButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/yellow_cards_real_madrid"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/yellowCardsRealMadridTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/foulsRealMadridButton" />
+
+                    <Button
+                        android:id="@+id/redCardsRealMadridButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/red_cards_real_madrid"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/redCardsRealMadridTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/yellowCardsRealMadridButton" />
+
+                    <TextView
+                        android:id="@+id/redCardsRealMadridTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/redCardsRealMadridButton"
+                        app:layout_constraintEnd_toStartOf="@+id/redCardsRealMadridButton"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/redCardsRealMadridButton" />
+
+                    <Button
+                        android:id="@+id/redCards2RealMadridButton"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/red_cards_by_yellow_cards_accumulation_real_madrid"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/redCards2RealMadridTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/redCardsRealMadridButton"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/redCards2RealMadridTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/redCards2RealMadridButton"
+                        app:layout_constraintEnd_toStartOf="@+id/redCards2RealMadridButton"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/redCards2RealMadridButton" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray">
-
-        </View>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_marginTop="190dp">
 
             <Button
-                android:id="@+id/goalRealMadridButton"
-                android:layout_width="match_parent"
+                android:id="@+id/resetAll"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/goal_real_madrid" />
+                android:text="@string/reset_all"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/goalsFromPenaltyRealMadridButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/goal_from_penalty_real_madrid"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/goalFromPenaltyRealMadridTextView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/goalFromPenaltyRealMadridTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/goalsFromPenaltyRealMadridButton"
-                    app:layout_constraintEnd_toStartOf="@+id/goalsFromPenaltyRealMadridButton"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/goalsFromPenaltyRealMadridButton" />
-
-                <Button
-                    android:id="@+id/foulsRealMadridButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/fouls_real_madrid"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/foulsRealMadridTextView"
-                    app:layout_constraintTop_toBottomOf="@+id/goalsFromPenaltyRealMadridButton" />
-
-                <TextView
-                    android:id="@+id/foulsRealMadridTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/foulsRealMadridButton"
-                    app:layout_constraintEnd_toStartOf="@+id/foulsRealMadridButton"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/foulsRealMadridButton" />
-
-                <TextView
-                    android:id="@+id/yellowCardsRealMadridTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/yellowCardsRealMadridButton"
-                    app:layout_constraintEnd_toStartOf="@+id/yellowCardsRealMadridButton"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/yellowCardsRealMadridButton" />
-
-                <Button
-                    android:id="@+id/yellowCardsRealMadridButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/yellow_cards_real_madrid"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/yellowCardsRealMadridTextView"
-                    app:layout_constraintTop_toBottomOf="@+id/foulsRealMadridButton" />
-
-                <Button
-                    android:id="@+id/redCardsRealMadridButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/red_cards_real_madrid"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/redCardsRealMadridTextView"
-                    app:layout_constraintTop_toBottomOf="@+id/yellowCardsRealMadridButton" />
-
-                <TextView
-                    android:id="@+id/redCardsRealMadridTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/redCardsRealMadridButton"
-                    app:layout_constraintEnd_toStartOf="@+id/redCardsRealMadridButton"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/redCardsRealMadridButton" />
-
-                <Button
-                    android:id="@+id/redCards2RealMadridButton"
-                    android:layout_width="110dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/red_cards_by_yellow_cards_accumulation_real_madrid"
-                    android:textSize="8sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/redCards2RealMadridTextView"
-                    app:layout_constraintTop_toBottomOf="@+id/redCardsRealMadridButton"
-                    tools:ignore="SmallSp" />
-
-                <TextView
-                    android:id="@+id/redCards2RealMadridTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/redCards2RealMadridButton"
-                    app:layout_constraintEnd_toStartOf="@+id/redCards2RealMadridButton"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/redCards2RealMadridButton" />
-
-            </android.support.constraint.ConstraintLayout>
-
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="190dp">
-
-        <Button
-            android:id="@+id/resetAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/reset_all"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </android.support.constraint.ConstraintLayout>
-
-</LinearLayout>
 
 </ScrollView>

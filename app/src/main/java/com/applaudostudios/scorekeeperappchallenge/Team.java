@@ -3,6 +3,7 @@ package com.applaudostudios.scorekeeperappchallenge;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+//It has all fields and methods needed for each Team
 public class Team implements Parcelable {
 
     private int mGoals;
@@ -70,30 +71,47 @@ public class Team implements Parcelable {
         return mRedCards2;
     }
 
-
+    /**
+     * Increment the score for the Team
+     */
     public void addGoal() {
         this.mGoals++;
     }
 
+    /**
+     * Increment the textView that shows the number of goals from penalties
+     */
     public void addGoalFromPenalty() {
         this.mGoalsFromPenalty++;
         this.mGoals++;
     }
 
+    /**
+     * Increment the textView that shows the number of fouls
+     */
     public void addFoul() {
         this.mFouls++;
     }
 
+    /**
+     * Increment the textView that shows the number of yellow cards
+     */
     public void addYellowCard() {
         this.mFouls++;
         this.mYellowCards++;
     }
 
+    /**
+     * Increment the textView that shows the number of red cards
+     */
     public void addRedCard() {
         this.mFouls++;
         this.mRedCards++;
     }
 
+    /**
+     * Increment the textView that shows the number of red cards by accumulation of yellow cards
+     */
     public void addRedCard2() {
         this.mRedCards2++;
     }
