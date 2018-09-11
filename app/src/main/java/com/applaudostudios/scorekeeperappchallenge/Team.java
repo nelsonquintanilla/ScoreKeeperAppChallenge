@@ -3,12 +3,11 @@ package com.applaudostudios.scorekeeperappchallenge;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-//It has all fields and methods needed for each Team
+// It has all fields and methods needed for each Team object
 public class Team implements Parcelable {
 
     private int mGoals;
     private int mGoalsFromPenalty;
-
     private int mFouls;
     private int mYellowCards;
     private int mRedCards;

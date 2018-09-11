@@ -49,8 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initializing a team object
         barcelona = new Team();
 
+        // Initializing each view related to the team
         scoreBarcelonaTextView = findViewById(R.id.barcelona_score);
         goalsFromPenaltyBarcelonaTextView = findViewById(R.id.goalFromPenaltyBarcelonaTextView);
         foulsBarcelonaTextView = findViewById(R.id.foulsBarcelonaTextView);
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         redCardsBarcelonaButton = findViewById(R.id.redCardsBarcelonaButton);
         redCards2BarcelonaButton = findViewById(R.id.redCards2BarcelonaButton);
 
+        // Setting the listeners to each button that has to cause an action
         goalBarcelonaButton.setOnClickListener(this);
         goalsFromPenaltyBarcelonaButton.setOnClickListener(this);
         foulsBarcelonaButton.setOnClickListener(this);
@@ -72,8 +75,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         redCardsBarcelonaButton.setOnClickListener(this);
         redCards2BarcelonaButton.setOnClickListener(this);
 
+        // Initializing a team object
         realMadrid = new Team();
 
+        // Initializing each view related to the team
         scoreRealMadridTextView = findViewById(R.id.real_madrid_score);
         goalsFromPenaltyRealMadridTextView = findViewById(R.id.goalFromPenaltyRealMadridTextView);
         foulsRealMadridTextView = findViewById(R.id.foulsRealMadridTextView);
@@ -88,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         redCardsRealMadridButton = findViewById(R.id.redCardsRealMadridButton);
         redCards2RealMadridButton = findViewById(R.id.redCards2RealMadridButton);
 
+        // Setting the listeners to each button that has to cause an action
         goalRealMadridButton.setOnClickListener(this);
         goalsFromPenaltyRealMadridButton.setOnClickListener(this);
         foulsRealMadridButton.setOnClickListener(this);
@@ -95,9 +101,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         redCardsRealMadridButton.setOnClickListener(this);
         redCards2RealMadridButton.setOnClickListener(this);
 
+        // Declaring, initializing and seting the listener for the reset button
         resetAll = findViewById(R.id.resetAll);
         resetAll.setOnClickListener(this);
 
+        // Calling the textViewsSetter method so each text view shows it's initial value
+        // after being created (zero)
         textViewsSetter();
 
     }
